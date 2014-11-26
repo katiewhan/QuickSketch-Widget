@@ -315,6 +315,13 @@ Full-Width Styles
   text-shadow: #111 0px 0px 10px;
 }
 
+#project_desc {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  background: none;
+  text-shadow: #111 0px 0px 10px;
+}
 #downloads {
   position: absolute;
   width: 210px;
@@ -358,6 +365,13 @@ Full-Width Styles
   background: #f2f2f2;
   border-top: 1px solid #111;
   border-bottom: 1px solid #111;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
 }
 
 #main_content {
@@ -368,6 +382,27 @@ Full-Width Styles
   background: #212121;
 }
 
+.ima {
+  height:20px;
+  width:20px;
+}
+.but {
+  height:20px;
+  width:20px;
+  visibility: hidden;
+}
+.can { 
+  cursor: pointer;
+  visibility: hidden;
+    background: white; 
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #DDD inset;
+    color: #666; 
+    outline: none; 
+    height: 150px; 
+    width: 300px; 
+} 
 
 
 /*******************************************************************************

@@ -8,39 +8,56 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Uifinalproject</title>
+    <title>Development</title>
   </head>
 
   <body>
-
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/katiewhan/UIFinalProject">View on GitHub</a>
 
-          <h1 id="project_title">Uifinalproject</h1>
-          <h2 id="project_tagline"></h2>
+          <h1 id="project_title">UI Development Assignment</h1>
+          <h2 id="project_tagline">By Katie Han</h2>
+          <p id="project_desc">
+          The widget below is a drawing tool that can be use on various occasions,
+          such as note-taking, sending an email, or posting on a social networking
+          site. After opening the widget with the pencil icon, the user can
+          click and drag the mouse on the canvas to quickly draw a small sketch of 
+          something to communicate his or her ideas. When incorporated into SNS, 
+          such as Facebook or Twitter, the 
+          download button would be replaced with an upload button so that the image 
+          can be posted directly. As one may expect, the download button downloads the drawn image, and the X button clears the canvas and folds it, 
+          returning the interface to its original form. Small graphic icons are
+          used instead of text-based buttons in order to make the widget more intuitive
+          and user-friendly. Although communcation online through text and photos is 
+          well-developed these days, the idea of sending quick sketches is uncommon. 
+          It is a utility that would make the user experience much simpler and more convenient.
+          </p>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/katiewhan/UIFinalProject/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/katiewhan/UIFinalProject/tarball/master">Download this project as a tar.gz file</a>
-            </section>
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
-    <input type="text" id="POSTBOX">
+    <div id="main_content_wrap" class="outer">
+      <img class="ima" id="open" src="images/pencil.png">
+      </br>
+      <canvas class="can" id="drawbox"></canvas>
+      <img class="but" id="download" src="images/download.png">
+      <img class="but" id="clear" src="images/x.png">
+      </br>
+    </div>
 
+
+    <script src="javascripts/main.js"></script>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Uifinalproject maintained by <a href="https://github.com/katiewhan">katiewhan</a></p>
+        <p class="copyright">UI Development Assignment maintained by <a href="https://github.com/katiewhan">katiewhan</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-
-    
 
   </body>
 </html>
