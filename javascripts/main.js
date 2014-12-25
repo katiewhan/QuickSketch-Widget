@@ -12,12 +12,14 @@ var clickY = new Array();
 var clickDrag = new Array();
 var paint;
 
+/* record x and y positions to arrays */
 function addClick(x, y, dragging) {
 	clickX.push(x);
 	clickY.push(y);
 	clickDrag.push(dragging);
 }
 
+/* draw the shape according to the values saved in arrays */
 function redraw(){
 	context.clearRect(0, 0, context.canvas.width, context.canvas.height);
 	context.strokeStyle = "#000080";
@@ -36,6 +38,7 @@ function redraw(){
 	
 }
 
+/* record clicking of mouse */
 document.getElementById("drawbox").onmousedown = function start(event) {
 	var mouseX = event.pageX - this.offsetLeft;
 	var mouseY = event.pageY - this.offsetTop;
@@ -45,23 +48,26 @@ document.getElementById("drawbox").onmousedown = function start(event) {
 	redraw();
 }
 
+/* record moving mouse only when already clicked (paint is true) */
 document.getElementById("drawbox").onmousemove = function move(event) {
-    var mouseX = event.pageX - this.offsetLeft;
+    	var mouseX = event.pageX - this.offsetLeft;
 	var mouseY = event.pageY - this.offsetTop;
 
-    if(paint){
-    	addClick(mouseX, mouseY, true);
-    	redraw();
-  	}
+    	if(paint){
+	    	addClick(mouseX, mouseY, true);
+	    	redraw();
+    	}
 }
 
+/* record release of mouse */
 document.getElementById("drawbox").onmouseup = function end(event) {
 	var mouseX = event.pageX - this.offsetLeft;
 	var mouseY = event.pageY - this.offsetTop;
 	addClick(mouseX, mouseY, false);
-    paint = false;
+    	paint = false;
 }
 
+/* stop when mouse leaves the canvas box */
 document.getElementById("drawbox").onmouseleave = function out(event) {
 	var mouseX = event.pageX - this.offsetLeft;
 	var mouseY = event.pageY - this.offsetTop;
@@ -69,6 +75,7 @@ document.getElementById("drawbox").onmouseleave = function out(event) {
 	paint = false;
 }
 
+/* clear the canvas and hide all*/
 document.getElementById("clear").onclick = function clearCanvas() {
 	context.clearRect(0, 0, context.canvas.width, context.canvas.height);
 	clickX = new Array();
@@ -81,6 +88,7 @@ document.getElementById("clear").onclick = function clearCanvas() {
 
 }
 
+/* download the image as a file */
 document.getElementById("download").onclick = function downloadCanvas() {
 	var img = document.getElementById("drawbox").toDataURL();
 	var link = document.createElement("a");
